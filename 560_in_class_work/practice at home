@@ -1,0 +1,20 @@
+'''
+triple 
+comment 
+time
+'''
+
+noun = 'person place thing or idea'                  #you have to use ' when assigning var
+verb = 'action or state of being'
+print ('a sentence includes a', noun, 'and an', verb)  #you can't use ' when using var and if your thingy has them you've got to get out with a ,
+
+print (noun, verb)
+
+
+
+#assign var first name
+f_name = input('enter your first name:')
+#assign var last name
+l_name = input('enter your last name:')
+#print greeting
+print ('Hello', f_name, l_name)
