@@ -1,4 +1,4 @@
-# Prime loop
+# Prime loop for assignment 5
 menu_option = ''
 
 # Outer loop continues looping until user inputs 'q'
