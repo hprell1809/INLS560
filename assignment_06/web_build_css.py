@@ -2,6 +2,7 @@ import os  # OS module
 import re  # Regular expression module
 
 # This is the slugify function.
+# This means that we're creating a a URL-friendly version of a string.
 def slugify(title):
     """Convert the page title to a filename-friendly slug."""
     if title.lower() == "home":  # Ensure 'Home' becomes 'index.html'
@@ -9,6 +10,8 @@ def slugify(title):
     return re.sub(r'\W+', '-', title.strip().lower()) + ".html"
 
 # Navigation function
+# This makes the top nav bar with links.
+# It's designed so that if I change the names of the pages, the nav bar will update.
 def generate_nav(titles, active_title):
     """Generate a dynamic navigation bar with an active page highlight."""
     nav_links = ""
@@ -21,7 +24,7 @@ def generate_nav(titles, active_title):
 # HTML file function
 def create_html_file(title, titles, output_dir="build"):
     """Generate and write HTML content based on the page title."""
-    filename = slugify(title)
+    filename = slugify(title)  # This means make it URL-friendly.
     nav = generate_nav(titles, active_title=title)
 
     html_content = f"""
@@ -57,6 +60,8 @@ def create_html_file(title, titles, output_dir="build"):
 def create_css_file(output_dir="build"):
     """Generate and write the style.css file based on a dictionary of styles."""
    # This is a dictionary!
+   # I can change the colors and fonts to whatever I want.
+   # Currently, it's Carolina branded.
     styles = {
         "font-family": "Calibri",             # font family
         "body-background": "#7BAFD4",     # Background color for .content
@@ -108,6 +113,7 @@ def create_css_file(output_dir="build"):
 
 # Main function
 def main():
+    # I can change these to be whatever I want! And the nav function will update.
     """Main function to generate pages and styles. MUST HAVE HOME!!!"""
     titles = ["Home", "About Us", "Products", "FAQs"]
 
@@ -117,7 +123,6 @@ def main():
 
     # Create the style.css file
     create_css_file() 
-    # uncomment the create_css_file() function if you add the function.
 
 if __name__ == "__main__":
     main()
