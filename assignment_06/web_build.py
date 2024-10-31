@@ -53,7 +53,7 @@ def create_html_file(title, titles, output_dir="build"):
 
     print(f"Created {filename} in the '{output_dir}' directory.")
 
-# CSS file function
+# pass the CSS file function
 def create_css_file():
     pass
 
