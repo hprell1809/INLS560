@@ -1,4 +1,5 @@
-https://goheels.com/sports/mens-basketball/roster
+# Data taken from: https://goheels.com/sports/mens-basketball/roster
 
 roster = ["Claude", "Brown", "Cadeau"]
-print(player)
+for player in roster:
+    print(player)
